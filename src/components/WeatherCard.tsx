@@ -1,5 +1,17 @@
 import "./WeatherCard.css";
-const WeatherCard = ({ weather }: { weather: any }) => {
+
+interface Weather {
+  weather: {
+    description: string;
+  };
+  wind_spd: number;
+  rh: number;
+  precip: number;
+  elev_angle: number;
+  temp: number;
+}
+
+const WeatherCard = ({ weather }: { weather: Weather }) => {
   return (
     <div
       id="box"

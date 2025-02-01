@@ -2,9 +2,21 @@
 import WeatherCard from "@/components/WeatherCard";
 import SearchBar from "@/components/SearchBar";
 import { useState, useEffect } from "react";
+interface Weather {
+  city_name: string;
+  country_code: string;
+  temp: number;
+  weather: {
+    description: string;
+  };
+  wind_spd: number;
+  rh: number;
+  precip: number;
+  elev_angle: number;
+}
 export default function Home() {
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState<any>(null);
+  const [weather, setWeather] = useState<Weather | null>(null);
   const handleSearch = (city: string) => {
     setCity(city);
   };
