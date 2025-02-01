@@ -35,7 +35,7 @@ export default function Home() {
     fetchWeather();
   }, [city]);
   return (
-    <div className="flex flex-col items-center justify-center gap-4 h-screen">
+    <div className="flex flex-col items-center justify-center gap-4 h-screen px-4">
       <SearchBar onSearch={handleSearch} />
       {weather ? (
         <WeatherCard weather={weather} />
