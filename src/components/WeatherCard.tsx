@@ -15,7 +15,9 @@ const WeatherCard = ({ weather }: { weather: Weather }) => {
   return (
     <div
       id="box"
-      className={weather.elev_angle > 0 ? "bg-[#47c5ff]" : "bg-[#000040]"}
+      className={`w-96 ${
+        weather.elev_angle > 0 ? "bg-[#47c5ff]" : "bg-[#000040]"
+      }`}
     >
       <div
         id="moon"
@@ -65,7 +67,7 @@ const WeatherCard = ({ weather }: { weather: Weather }) => {
       ></div>
       <div
         id="info"
-        className={`px-4 ${
+        className={`px-4 w-96 ${
           weather.elev_angle > 0 ? "bg-white text-black" : "bg-black text-white"
         }`}
       >
