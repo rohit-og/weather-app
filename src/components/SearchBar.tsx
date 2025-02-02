@@ -7,7 +7,7 @@ const SearchBar = ({ onSearch }: { onSearch: (city: string) => void }) => {
     onSearch(city);
   };
   return (
-    <div className="flex justify-center gap-2 items-center bg-slate-50 text-slate-900 w-96 rounded-md ">
+    <div className="flex justify-center gap-2 items-center bg-slate-50 text-slate-900 w-full sm:w-96 rounded-md ">
       <input
         value={city}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
